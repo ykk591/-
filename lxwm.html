@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们</title>
+	<meta name="viewport" content="width=device-width,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <style>
+        .nav{
+                width: 1100px;
+                height: 70px;
+                margin:0 auto;
+                background: #0b0b0b;
+                
+            
+            }           
+             .nav ul{
+                display:flex;
+                
+                
+            }
+            
+            .nav li{
+                display: block;
+                float: right;
+                margin-top: 15px;
+                
+            }
+            .nav li a{
+                display: block;
+                padding: 6px 8px;
+                line-height: 27px;
+                font-size: 19px;
+                
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+            }
+            /* END */
+            
+            /* 每个菜单的样式(宽度这里调,子菜单宽度都听这个) */
+            .items {
+                
+                width: 130px;
+                color: #fff;
+            }
+            /* END */
+            
+            /* 菜单与鼠标移入 */
+            .menu{
+                width: 100%;
+                height: 45px;
+                background: rgb(13, 13, 13);
+                line-height: 45px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .menu:hover{
+                overflow: visible;
+                background: rgb(236, 10, 10);
+                color: white;
+                z-index: 999;
+                cursor: pointer;
+            }
+            /* END */
+            
+            /* 下拉菜单与鼠标移入 */
+            .drop{
+                background: rgb(11, 11, 11);
+                text-align: center;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .drop:hover{
+                background: rgb(246, 5, 5);
+                cursor: pointer;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+              }
+      *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	height: 100vh;
+}
+.contain{
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height:100%;
+	padding: 20px 100px;
+}
+.contain:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url("images/11.jpg") no-repeat center;
+	background-size: cover;
+	z-index: -1;
+	filter: blur(50px);
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns:repeat(2,1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+.left{
+	height: 100%;
+	background: url("images/11.jpg")no-repeat center;
+	background-size: cover;
+}
+.right{
+	padding: 25px 40px;
+}
+h2{
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+h2:after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	height: 4px;
+	width: 50px;
+	border-radius: 2px;
+	background-color: #8CB8BE;
+}
+.field{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	outline: none;
+	border: 2px solid rgba(0,0,0,0);
+	background-color: rgba(230,230,230,0.6);
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+.field:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+.field:focus{
+	background-color: #fff;
+	border: 2px solid rgba(30,85,250,0.47);
+}
+.area{
+	min-height: 150px;
+	width: 300px;
+}
+.btm{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	background-color: #2eec71;
+	cursor:pointer;
+	outline: none;
+	border: none;
+	color: #fff;
+	transition: .3s;
+}
+.btn:hover{
+	background-color: #27ae60;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+@media screen and (max-width:888px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+            <section class="content">
+                <div class="items">
+                    <div class="menu">
+                        <span><a href="sy.html">首页</a></span>
+                        <div>
+                            <div class="drop">设计目的</div>
+                            <div class="drop">应用领域</div>
+                        </div>
+                    </div>
+                </div></li>
+            <li><section class="content">
+                <div class="items">
+                    <div class="menu">
+                        <span><a href="jsxg.html">技术相关</a></span>
+                        <div>
+                            <div class="drop">技术特点</div>
+                            <div class="drop">参考文献</div>
+                        </div>
+                    </div>
+                </div></li>
+            <li><section class="content">
+                <div class="items">
+                    <div class="menu">
+                        <span><a href="xnzb.html">性能指标</a></span>
+                        <div>
+                            <div class="drop">性能指标</div>
+                            <div class="drop">功能说明</div>
+                        </div>
+                    </div>
+                </div></li>
+            <li><div class="items">
+                <div class="menu">
+                   <span><a href="yhjm.html">用户界面</a></span>
+                    <div></div>
+                </div>
+            </div></li>
+            <li><div class="items">
+                <div class="menu">
+                    <span><a href="lxwm.html">联系我们</a></span>
+                    <div></div>
+                </div>
+            </div></li>
+        </ul>
+</div>
+	<div class="contain">
+		<div class="contact-box">
+		<div class="left"></div>
+	<div class="right">
+		<h2>Contact Us</h2>
+		<input type="text" class="field" placeholder="Your Name">
+		<input type="email" class="field" placeholder="Your Email">
+		<input type="text" class="field" placeholder="Your Phone">
+		<textarea class="filed area" placeholder="Message"></textarea>
+		<br>
+		<button class="btn">Send</button>
+		</div>
+            
+</body>
+</html>

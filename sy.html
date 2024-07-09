@@ -1,0 +1,474 @@
+<html>
+    <head>
+        <style>
+            
+            .nav{
+                width: 1100px;
+                height: 70px;
+                margin:0 auto;
+                background: #0b0b0b;
+                
+            
+            }           
+             .nav ul{
+                display:flex;
+                
+                
+            }
+            
+            .nav li{
+                display: block;
+                float: right;
+                margin-top: 15px;
+                
+            }
+            .nav li a{
+                display: block;
+                padding: 6px 8px;
+                line-height: 27px;
+                font-size: 19px;
+                
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+            }
+            /* END */
+            
+            /* 每个菜单的样式(宽度这里调,子菜单宽度都听这个) */
+            .items {
+                
+                width: 130px;
+                color: #fff;
+            }
+            /* END */
+            
+            /* 菜单与鼠标移入 */
+            .menu{
+                width: 100%;
+                height: 45px;
+                background: rgb(13, 13, 13);
+                line-height: 45px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .menu:hover{
+                overflow: visible;
+                background: rgb(236, 10, 10);
+                color: white;
+                z-index: 999;
+                cursor: pointer;
+            }
+            /* END */
+            
+            /* 下拉菜单与鼠标移入 */
+            .drop{
+                background: rgb(11, 11, 11);
+                text-align: center;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .drop:hover{
+                background: rgb(246, 5, 5);
+                cursor: pointer;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+              }
+            /*轮播图*/
+            .slider {
+                position: relative;
+                width: 1100px;
+                height: 550px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            
+            .slider-wrapper {
+                width: 100%;
+                height: 320px;
+            }
+            
+            .slider-wrapper img {
+                display: block;
+                width: 1100px;
+                height: 550px;
+            }
+            
+            .prev {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            
+            .next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+            
+            button {
+                width: 28px;
+                height: 28px;
+                appearance: none;
+                border: none;
+                background: rgba(231, 226, 226, 0.5);
+                color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            .slider-footer .toggle button:hover {
+                background: rgba(85, 85, 85, 0.8);
+            }
+            
+            .slider-indicator {
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                align-items: center;
+            }
+            
+            .slider-indicator li {
+                width: 8px;
+                height: 8px;
+                margin: 4px;
+                border-radius: 50%;
+                background: hsl(0, 47%, 96%);
+                opacity: 0.4;
+                cursor: pointer;
+            }
+            
+            .slider-indicator li.active {
+                width: 12px;
+                height: 12px;
+                opacity: 1;
+            }
+            .mid {width:1100px; padding-top:20px;padding-bottom:20px; margin:auto; background:#000;clear:both;}/*下面黑框*/
+            .mid p{font-size:16px;color:#fff; line-height:24px; text-align:center;}
+            .fuwu{
+                width: 1100px;
+                height: 550px;
+                background-image: url(images/5.jpg);
+                background-repeat: no-repeat;
+                margin: 0 auto; 
+                display:flex 
+            }
+            .fuwu .box1{
+                width: 250px;
+                height: 200px;
+                margin-top: 150px;
+                border:solid 2px black;
+                padding: 60px;
+                margin-right: 20px;
+                margin-left: 20px;
+                color: #black;   
+            }
+            .fuwu .box2{
+                width: 250px;
+                height: 200px;
+                margin-top: 150px;
+                border:solid 2px black;
+                padding: 60px;
+                margin-right: 20px;
+                color: #black; 
+            }
+            .fuwu .box3{
+                width: 250px;
+                height: 200px;
+                margin-top: 150px;
+                border:solid 2px black;
+                padding: 60px;
+                margin-right: 20px;
+                color: #black;    
+            }
+            .fuwu .box4{
+                width: 250px;
+                height: 200px;
+                margin-top: 150px;
+                border:solid 2px black;
+                padding: 60px;
+                margin-right: 20px;
+                color: #black;    
+            }
+            .xin{
+                width: 1100px;
+                height: 550px;
+                background-color: rgb(116, 106, 143);
+                margin: 0 auto;
+                
+            }
+            * {padding: 0;margin: 0;}
+           .xin ul,ol {list-style: none;}
+           .main{
+            width:1100px;
+            height: 550px;
+            margin:0 auto;
+            overflow:hidden;}
+            .main img{
+                width: 1100px;
+                height: 550px;
+            }
+            .main li{
+                width: 160px;float: left;
+                border-left:1px solid #fff;
+                position:relative;/* 这里最后设置一下图片之间的切换时间 */
+                transition:all 2s;}
+            .flag{position: absolute;
+                    left:0;bottom:0;
+                    width:100%;height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    color:#fff;
+                    background:rgba(0,0,0,0.5)}
+            .main:hover li{width: 150px;}
+            .main li:hover{width: 1280px;}
+            
+        </style>
+        <title>教室智能照明系统</title>
+    </head>
+    <body>
+        
+            <div class="nav">
+                <ul>
+                    <li>
+                    <section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="sy.html">首页</a></span>
+                                <div>
+                                    <div class="drop">设计目的</div>
+                                    <div class="drop">应用领域</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="jsxg.html">技术相关</a></span>
+                                <div>
+                                    <div class="drop">技术特点</div>
+                                    <div class="drop">参考文献</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="xnzb.html">性能指标</a></span>
+                                <div>
+                                    <div class="drop">性能指标</div>
+                                    <div class="drop">功能说明</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="yhjm.html">用户界面</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="lxwm.html">联系我们</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                </ul>
+        </div>
+       
+    <div class="slider">
+        <div class="slider-wrapper">
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/4.jpg" alt="" />
+        </div>
+        <!-- 小圆点 -->
+        <ul class="slider-indicator">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- 按钮 -->
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+ 
+    </div>
+    <script>
+        //
+        // 初始数据
+        const data = [{
+                url: './images/1.jpg',
+                title: '我是banner01',
+                color: '#4e6acd'
+            }, {
+                url: './images/2.jpg',
+                title: '我是banner02',
+                color: '#fa8484'
+            }, {
+                url: './images/3.jpg',
+                title: '我是banner03',
+                color: '#ed8c03'
+            },{
+                url: './images/4.jpg',
+                title: '我是banner03',
+                color: '#ed8c03'
+            }]
+            // 准备工作：先获取所有需要操作的元素  
+        const next = document.querySelector('.next')
+        const img = document.querySelector('.slider-wrapper img')
+        const lis = document.querySelectorAll('.slider-indicator li')
+        let i = 0 //下标从0开始计
+            //0、封装render函数提取公共代码
+        function render() {
+            //0.1、 更换数组中第i个banner图
+            img.src = data[i].url
+                //0.2、 删除已有的 active
+            document.querySelector('.active').classList.remove('active')
+                // 0.3、添加的 active 
+            lis[i].classList.add('active')
+        }
+ 
+        // 1、按钮的注册点击事件
+        // 1.1 右侧的按钮点击事件->实现切换图片和圆点
+        next.addEventListener('click', function() {
+            //1.2点击之后i每次加1
+            i++
+            //1.3大于等于数组长度(3) 的时候 下标从0开始
+            if (i >= data.length) {
+                i = 0
+            }
+            //渲染页面
+            render()
+        })
+ 
+        // 2、 右侧的按钮点击事件->实现切换图片和圆点 
+        const prev = document.querySelector('.prev')
+        prev.addEventListener('click', function() {
+            //2.1、同理 每次点击i就减1
+            i--
+            //2.2、小于0 时， 下标从最后一位下标(data.length - 1)开始
+            if (i < 0) {
+                i = data.length - 1
+            }
+            //渲染一下
+            render()
+ 
+        })
+ 
+        // 3、自动播放图片->定时器 —> 自动执行已经写好按钮点击事件
+        let timer = setInterval(function() {
+            //3.1、 自动点击事件的方法 ！直接用就行
+            next.click()
+        }, 1000)
+ 
+        // 4、 鼠标经过/离开 可以继续/暂停 播放  
+        const slider = document.querySelector('.slider')
+            //4.1 给大盒子注册鼠标经过事件
+        slider.addEventListener('mouseenter', function() {
+            //4.2 经过就清除定时器   
+            clearInterval(timer)
+        })
+ 
+        //5.1、鼠标离开事件
+        slider.addEventListener('mouseleave', function() {
+            // 5.2鼠标离开就重新开启定时器   
+            timer = setInterval(function() {
+                // 5.3 定时器中添加自动点击按钮
+                next.click()
+            }, 1000)
+        })
+ 
+        // 6、点击小圆点切换图片 
+        // 6.1、遍历伪数组中的每一个DOM对象(li)
+        for (let j = 0; j < lis.length; j++) {
+            // 6.2、给小圆点注册点击事件
+            lis[j].addEventListener('click', function() {
+                //6.3、跟i变量保持一致 点击第j个圆点就切换到第i个banner图  
+                i = j
+                    //渲染页面
+                render()
+            })
+        }
+    </script>
+    <div class="mid">
+        <p>设计目的</p>
+    </div>
+    <div class="fuwu">
+        <div class="box1"><p>通过自动调节照明亮度，根据教室内的自然光照和人员活动情况来开关灯，减少能源浪费。</p></div>
+        <div class="box2"><p>通过智能调光和色温调节，创造舒适和有利于学生身心健康的光环境。</p></div>
+        <div class="box3"><p>确保照明系统在紧急情况下（如火灾、疏散等）能够提供足够的照明，保障人员安全。</p></div>
+        <div class="box4"><p>集中控制和管理照明系统，便于学校后勤管理人员进行监控和维护。</p></div> 
+</div>
+<div class="mid">
+    <p>应用领域</p>
+</div>
+<div class="xin">
+   <ul class="main">
+
+       <li>
+
+           <img src="images/6.jpg" alt="">
+
+           <div class="flag">教室主灯是中小学棋艺教室中最常用的一种灯具，它通常悬挂在教室的中央，为整个教室提供明亮的光线。</div>
+
+       </li>
+
+       <li>
+
+           <img src="images/7.jpg" alt="">
+
+           <div class="flag">局部照明灯主要用于照亮教室中的特定区域，如黑板、讲台等。</div>
+
+       </li>
+
+       <li>
+
+           <img src="images/8.jpg" alt="">
+
+           <div class="flag">装饰照明灯主要用于提升教室的美观度和氛围</div>
+
+       </li>
+
+       <li>
+
+           <img src="images/9.jpg" alt="">
+
+           <div class="flag">紧急照明灯是中小学棋艺教室必备的照明设备，主要用于在突发情况下为教室提供临时照明</div>
+
+       </li>
+
+       <li>
+
+           <img src="images/10.jpg" alt="">
+
+           <div class="flag">智能照明系统可以根据教室的光线强度、人数等信息，自动调节照明强度和模式</div>
+
+       </li>
+   </ul>
+</div>
+<div class="mid">
+    <a href="sy.html"><p>返回首页</p></a>
+</div>
+
+</body>
+</html>

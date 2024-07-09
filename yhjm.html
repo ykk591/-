@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教室智能照明系统</title>
+<style>
+	.nav{
+                width: 1100px;
+                height: 80px;
+                margin:0 auto;
+                background: #0b0b0b;
+                
+            
+            }           
+             .nav ul{
+                display:flex;
+                
+                
+            }
+            
+            .nav li{
+                display: block;
+                float: right;
+                margin-top: 15px;
+                
+            }
+            .nav li a{
+                display: block;
+                padding: 6px 8px;
+                line-height: 27px;
+                font-size: 19px;
+                
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+            }
+            /* END */
+            
+            /* 每个菜单的样式(宽度这里调,子菜单宽度都听这个) */
+            .items {
+                
+                width: 130px;
+                color: #fff;
+            }
+            /* END */
+            
+            /* 菜单与鼠标移入 */
+            .menu{
+                width: 100%;
+                height: 45px;
+                background: rgb(13, 13, 13);
+                line-height: 45px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .menu:hover{
+                overflow: visible;
+                background: rgb(236, 10, 10);
+                color: white;
+                z-index: 999;
+                cursor: pointer;
+            }
+            /* END */
+            
+            /* 下拉菜单与鼠标移入 */
+            .drop{
+                background: rgb(11, 11, 11);
+                text-align: center;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .drop:hover{
+                background: rgb(246, 5, 5);
+                cursor: pointer;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+              }
+   body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f7f7f7;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .box {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px;
+        width: 30%;
+    }
+    h1 {
+        color: #333;
+        margin-bottom: 30px;
+    }
+    h2 {
+        color: #2196F3;
+        margin-bottom: 15px;
+    }
+    p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+    }
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+   
+</style>
+</head>
+<body>
+	<div class="nav">
+                <ul>
+                    <li>
+                    <section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="sy.html">首页</a></span>
+                                <div>
+                                    <div class="drop">设计目的</div>
+                                    <div class="drop">应用领域</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="jsxg.html">技术相关</a></span>
+                                <div>
+                                    <div class="drop">技术特点</div>
+                                    <div class="drop">参考文献</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="xnzb.html">性能指标</a></span>
+                                <div>
+                                    <div class="drop">性能指标</div>
+                                    <div class="drop">功能说明</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="yhjm.html">用户界面</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="lxwm.html">联系我们</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                </ul>
+        </div>
+<h1>教室智能照明系统</h1>
+<div class="container">
+    <!-- 传感器数据区域 -->
+    <div class="box sensor-data">
+        <h2>传感器数据</h2>
+        <p>光强度：<span id="lightIntensity">加载中...</span></p>
+        <p>温度：<span id="temperature">加载中...</span></p>
+        <p>湿度：<span id="humidity">加载中...</span></p>
+        <p>能耗情况：<span id="energyConsumption ">加载中...</span></p>
+    </div>
+    <!-- 人体检测页面 -->
+    <div class="box human-detection">
+        <h2>人体检测</h2>
+        <p>人数：<span id="detectedPeople">0</span>人</p>
+        <p>灵敏度: <input type="range" id="sensitivity" min="0" max="100" value="50" oninput="setSensitivity()"></p>
+    </div>
+    <!-- 手动调节页面 -->
+    <div class="box manual-controls">
+        <h2>手动调节</h2>
+        <p>亮度: <input type="range" id="manualBrightness" min="0" max="100" value="50" oninput="setManualBrightness()"></p>
+        <p>色温: <input type="range" id="manualColorTemperature" min="2700" max="6500" value="5000" oninput="setManualColorTemperature()"></p>
+        <p>模式: <select id="manualMode" onchange="setManualMode()">
+            <option value="normal">正常</option>
+            <option value="study">学习</option>
+            <option value="presentation">演示</option>
+        </select></p>
+    </div>
+    <!-- 自动调控页面 -->
+    <div class="box auto-controls">
+        <h2>自动调控</h2>
+        <p>模式: <select id="autoMode" onchange="setAutoMode()">
+            <option value="off">关闭</option>
+            <option value="auto">自动</option>
+        </select></p>
+        <p>定时开关:</p>
+        <p>起始时间: <input type="time" id="startTime" onchange="setTimer()"></p>
+        <p>结束时间: <input type="time" id="endTime" onchange="setTimer()"></p>
+    </div>
+</div>
+<script>
+// 更新传感器数据
+function updateSensorData() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/sensor_data', true);
+    xhr.onload = function() {
+        if (xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            document.getElementById('lightIntensity').textContent = data.lightIntensity;
+            document.getElementById('temperature').textContent = data.temperature;
+            document.getElementById('humidity').textContent = data.humidity;
+        } else {
+            console.error('Failed to load sensor data');
+        }
+    };
+    xhr.send();
+}
+
+// 定期更新传感器数据
+setInterval(updateSensorData, 5000); // 每5秒更新一次
+// 设置自动调控模式
+function setAutoMode() {
+    var mode = document.getElementById('autoMode').value;
+    // 发送mode到服务器或直接处理
+    console.log('自动调控模式设置为: ' + mode);
+}
+
+// 设置定时开关
+function setTimer() {
+    var startTime = document.getElementById('startTime').value;
+    var endTime = document.getElementById('endTime').value;
+    // 发送startTime和endTime到服务器或直接处理
+    console.log('定时开关设置: 从 ' + startTime + ' 到 ' + endTime);
+}
+
+// 设置人体检测灵敏度
+function setSensitivity() {
+    var sensitivity = document.getElementById('sensitivity').value;
+    // 发送sensitivity到服务器或直接处理
+    console.log('人体检测灵敏度设置为: ' + sensitivity + '%');
+}
+// 更新检测到的人数
+function updateDetectedPeople() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/people_detection', true);
+    xhr.onload = function() {
+        if (xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            document.getElementById('detectedPeople').textContent = data.count;
+        } else {
+            console.error('Failed to load people detection data');
+        }
+    };
+    xhr.send();
+}
+
+// 定期更新检测到的人数
+setInterval(updateDetectedPeople, 5000); // 每5秒更新一次
+</script>
+
+</body>
+</html>
+
+

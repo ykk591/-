@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xnzb</title>
+	<style>
+		.nav{
+                
+                width: 1100px;
+                height: 70px;
+                margin:0 auto;
+                background: #0b0b0b;
+            }           
+             .nav ul{
+                display:flex;
+            }
+            .nav li a{
+                display: block;
+                padding: 6px 8px;
+                line-height: 27px;
+                font-size: 19px;
+            }
+            .nav li{
+                display: block;
+                float: right;margin-top: 15px;
+               
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+            }
+            /* END */
+            
+            /* 每个菜单的样式(宽度这里调,子菜单宽度都听这个) */
+            .items {
+                width: 130px;
+                color: #fff;
+            }
+            /* END */
+            
+            /* 菜单与鼠标移入 */
+            .menu{
+                width: 100%;
+                height: 45px;
+                background: rgb(13, 13, 13);
+                line-height: 45px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .menu:hover{
+                overflow: visible;
+                background: rgb(236, 10, 10);
+                color: white;
+                z-index: 999;
+                cursor: pointer;
+            }
+            /* END */
+            
+            /* 下拉菜单与鼠标移入 */
+            .drop{
+                background: rgb(11, 11, 11);
+                text-align: center;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            .drop:hover{
+                background: rgb(246, 5, 5);
+                cursor: pointer;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+              }
+		.tp{
+			width: 1100px;
+			height: 500px;
+			margin: auto;
+		}
+		.tp img{
+			width:1100px;
+			height:500px;
+		}
+		.mk{
+			width: 1100px;
+			height: 250px;
+			margin: auto;
+		}
+		
+/*中间内容*/
+.main{width:1000px;padding:50px;overflow:hidden;margin:auto; background-color:rgba(255,255,255,80.00);margin-right:200px;display: flex;}/*中间白色*/
+.main_left{width:200px; height:auto; margin-right:20px;}
+.main_left .pic{width:190px;border:5px solid #000;}
+.main_left .pic img{width:190px;display:block;}
+.main_left .search{ width:200px;height:34px;margin-top:30px;}
+.main_left .search .btn{width:34px;height:34px;border:none;background:url("images/22.jpg");cursor:pointer;float:left;outline:none;}
+.main_left .search .text{display:block;width:160px;height:34px;border:none;font-size:14px;color:#333;float:left;margin-left:6px;outline:none;}
+
+.main_right{width:760px; height:auto; float:left;margin-left:20px;} 
+.main_right h2{font-size:22px; color:#333; line-height:36px;text-align:center;}
+.main_right .jianjie img{width:100%;}
+.main_right .jianjie h1{font-size:16px; color:#666; width: 400px; line-height:2;text-indent:32px;margin-left:170px;}/*简介右移*/
+		
+/*文化部分*/
+.mid {width:1100px; padding-top:20px;padding-bottom:20px; margin:auto; background:#000;clear:both;}/*下面黑框*/
+.mid p{font-size:16px;color:#fff; line-height:24px; text-align:center;}
+		
+	</style>
+</head>
+<body>
+	 <div class="nav">
+                <ul>
+                    <li>
+                    <section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="sy.html">首页</a></span>
+                                <div>
+                                    <div class="drop">设计目的</div>
+                                    <div class="drop">应用领域</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="jsxg.html">技术相关</a></span>
+                                <div>
+                                    <div class="drop">技术特点</div>
+                                    <div class="drop">参考文献</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><section class="content">
+                        <div class="items">
+                            <div class="menu">
+                                <span><a href="xnzb.html">性能指标</a></span>
+                                <div>
+                                    <div class="drop">性能指标</div>
+                                    <div class="drop">功能说明</div>
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="yhjm.html">用户界面</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                    <li><div class="items">
+                        <div class="menu">
+                            <span><a href="lxwm.html">联系我们</a></span>
+                            <div></div>
+                        </div>
+                    </div></li>
+                </ul>
+        </div>
+	<div class="main">
+        <div class="main_left">  
+                <img src="images/18.jpg" width="400" height="620" alt=""/>              
+        </div>
+        <div class="main_right">
+            <div class="jianjie">
+                <h2>性能指标</h2>
+                <h1>龙芯派二代<br>
+Architecture: mips64<br>
+Byte Order: Little Endian<br>
+CPU(s): 2<br>
+On-line CPU(s) list: 0,1<br>
+Tread(s) per core: 1<br>
+Core(s) per socket: 2<br>
+Socket(s): 1<br>
+NUMA node(s): 1<br>
+BogoMIPS: 1988.60<br>
+L1d cache: 32K<br>
+L1i cache: 32K<br>
+L2 cache: 1024K<br>
+					NUMA node0 CPU(s): 0,1</h1>
+          </div>
+        </div>
+    </div>
+	<div class="mid">
+        <p>功能说明</p>
+    </div>
+	<div class="tp">
+		<img src="images/19.jpg">
+	</div>
+	<div class="mk">
+		<h1><center>各模块介绍</center></h1><br>
+光线传感器：用于检测教室内的光线强度，以判断是否需要调整照明亮度。<br>
+人体红外传感器：用于检测教室内是否有人，无人时自动关闭灯光，节省能源。<br>
+嵌入式控制器：这是系统的核心，通常采用微控制器或者微处理器，根据传感器收集的数据和控制算法来调节照明。<br>
+执行机构：如LED灯具或调光模块，根据控制器的指令调节亮度或开关。<br>
+通信模块：用于连接到校园网络，实现远程监控和管理。<br>
+用户界面：可以是物理按键、触摸屏或者手机应用，允许用户手动控制照明系统。<br>
+主控系统：通过网络连接的中央控制系统进行管理。
+	</div>
+	<div class="mid">
+        <a href="sy.html"><p>返回首页</p></a>
+    </div>
+</body>
+</html>
